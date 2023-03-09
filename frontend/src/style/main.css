@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&display=swap');
+
+.header {
+    background-color: #000;
+    font-weight: 600;
+    color: #fff;
+    padding: 25px 100px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+}
+
+body {
+    background-color: #333333;
+    color: #fff;
+}
+
+main {
+    margin: 50px 100px;
+    width: 50%;
+    float: left;
+}
+
+main .ticket {
+    margin-bottom: 50px;
+    background-color: #3e8fa0;
+    padding: 20px;
+}
+
+main .detail-icon {
+    float: right;
+    margin-right: 25px;
+    color: #165664;
+    cursor: pointer;
+    transform: scale(2);
+}
+
+main .detail-icon:hover {
+    opacity: 0.5;
+}
+
+.detailTicket p{
+    width: 90%;
+    padding: 15px 5%;
+    font-family: 'Montserrat', 'sans-serif';
+    font-weight: 300;
+    margin-bottom: 10px;
+    border: 0;
+    background: #222;
+    color: #fff;
+    outline: none;
+    font-size: 15px;
+}
+
+.detailTicket {
+    margin-top: 20px;
+}
+
+.detailTicket p {
+    background-color: #134b57;
+}
