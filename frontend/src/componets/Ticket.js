@@ -19,11 +19,8 @@ class Ticket extends React.Component {
                         detailForm: !this.state.detailForm
                     })
                 }} className="detail-icon" />
-                <h3>{this.ticket.name}</h3>
-                <p>{this.ticket.year}</p>
-                <p>{this.ticket.color}</p>
-                <p>{this.ticket.pantone_value}</p>
-                {this.state.detailForm && <TicketDetail ticket={this.ticket} onDetail={this.props.onDetail}/>}
+                <h3>{this.ticket.name} {this.ticket.country}</h3>
+                {this.state.detailForm && <TicketDetail ticket={this.ticket} />}
             </div>
         )
     }
