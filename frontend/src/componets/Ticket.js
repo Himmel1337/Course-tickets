@@ -1,6 +1,6 @@
 import React from "react";
 import TicketDetail from "./TicketDetail";
-import {FaArrowAltCircleDown} from "react-icons/fa";
+import {FaScroll} from "react-icons/fa";
 
 
 class Ticket extends React.Component {
@@ -14,7 +14,7 @@ class Ticket extends React.Component {
     render() {
         return (
             <div className="ticket">
-                <FaArrowAltCircleDown onClick={() => {
+                <FaScroll onClick={() => {
                     this.setState({
                         detailForm: !this.state.detailForm
                     })
