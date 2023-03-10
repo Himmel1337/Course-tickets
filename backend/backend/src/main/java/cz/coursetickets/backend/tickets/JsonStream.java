@@ -1,6 +1,5 @@
 package cz.coursetickets.backend.tickets;
 
-import cz.coursetickets.backend.tickets.TicketDTO;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
@@ -19,7 +18,7 @@ import java.util.stream.IntStream;
 
 public class JsonStream {
     public String stream() {
-        URL url = null;
+        URL url;
         try {
             url = new URL("https://webapi.developers.erstegroup.com/api/csas/public/sandbox/v2/rates/exchangerates?web-api-key=c52a0682-4806-4903-828f-6cc66508329e");
         } catch (MalformedURLException e) {
@@ -48,11 +47,11 @@ public class JsonStream {
     }
 
     public List<TicketInDTO> getTickets (String json) {
-        List <TicketInDTO> tickets = new ArrayList<TicketInDTO>();
+        List <TicketInDTO> tickets = new ArrayList<>();
         for (int i = 0; i < getValuesForGivenKey(json, "name").size(); i++){
             DateTimeFormatter inputFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss");
             LocalDate date = LocalDate.parse(getValuesForGivenKey(json, "validFrom").get(i), inputFormatter);
-            TicketInDTO ticket = new TicketInDTO(Long.valueOf(i+1),
+            TicketInDTO ticket = new TicketInDTO((long) (i + 1),
                     getValuesForGivenKey(json, "name").get(i),
                     getValuesForGivenKey(json, "country").get(i),
                     Double.valueOf(getValuesForGivenKey(json, "move").get(i)),
@@ -66,7 +65,7 @@ public class JsonStream {
                     Long.valueOf(getValuesForGivenKey(json, "version").get(i)),
                     Double.valueOf(getValuesForGivenKey(json, "cnbMid").get(i)),
                     Double.valueOf(getValuesForGivenKey(json, "ecbMid").get(i)),
-                    getValuesForGivenKey(json.toString(), "shortName").get(i), date);
+                    getValuesForGivenKey(json, "shortName").get(i), date);
             tickets.add(ticket);
         }
 
