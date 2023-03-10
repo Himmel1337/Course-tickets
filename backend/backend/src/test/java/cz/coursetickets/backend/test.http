@@ -1,0 +1,6 @@
+### All flights
+
+GET http://localhost:8082/tickets
+
+
+### Fetch Existing flight

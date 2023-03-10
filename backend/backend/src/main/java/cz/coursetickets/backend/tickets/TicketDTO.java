@@ -1,10 +1,11 @@
 package cz.coursetickets.backend.tickets;
 
 import cz.coursetickets.backend.common.domain.Ticket;
-import jakarta.persistence.*;
+import javax.persistence.*;
 import lombok.Builder;
 import lombok.Data;
-import java.util.Date;
+
+import java.time.LocalDate;
 
 @Data
 @Builder
@@ -27,7 +28,7 @@ public class TicketDTO {
     private Double cnbMid;
     private Double ecbMid;
     private String shortName;
-    private Date validFrom;
+    private LocalDate validFrom;
 
     public static TicketDTO fromDB(Ticket ticket) {
         if (ticket == null) return null;
@@ -50,6 +51,4 @@ public class TicketDTO {
                 .validFrom(ticket.getValidFrom())
                 .build();
     }
-
-    // Getters and setters
 }

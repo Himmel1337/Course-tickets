@@ -2,7 +2,8 @@ package cz.coursetickets.backend.tickets;
 
 import lombok.Builder;
 import lombok.Data;
-import java.util.Date;
+
+import java.time.LocalDate;
 
 @Data
 @Builder
@@ -22,5 +23,5 @@ public class TicketInDTO {
     private Double cnbMid;
     private Double ecbMid;
     private String shortName;
-    private Date validFrom;
+    private LocalDate validFrom;
 }

@@ -1,8 +1,8 @@
 package cz.coursetickets.backend.common.domain;
 
 import lombok.*;
-import jakarta.persistence.*;
-import java.util.Date;
+import javax.persistence.*;
+import java.time.LocalDate;
 
 @Getter
 @Setter
@@ -30,37 +30,37 @@ public class Ticket {
     @Column(name = "amount")
     private Long amount;
 
-    @Column(name = "valBuy")
+    @Column(name = "val_buy")
     private Double valBuy;
 
-    @Column(name = "valSell")
+    @Column(name = "val_sell")
     private Double valSell;
 
-    @Column(name = "valMid")
+    @Column(name = "val_mid")
     private Double valMid;
 
-    @Column(name = "currBuy")
+    @Column(name = "curr_buy")
     private Double currBuy;
 
-    @Column(name = "currSell")
+    @Column(name = "curr_sell")
     private Double currSell;
 
-    @Column(name = "currMid")
+    @Column(name = "curr_mid")
     private Double currMid;
 
     @Column(name = "version")
     private Long version;
 
-    @Column(name = "cnbMid")
+    @Column(name = "cnb_mid")
     private Double cnbMid;
 
-    @Column(name = "ecbMid")
+    @Column(name = "ecb_mid")
     private Double ecbMid;
 
-    @Column(name = "shortName")
+    @Column(name = "short_name")
     private String shortName;
 
-    @Column(name = "validFrom")
-    private Date validFrom;
+    @Column(name = "valid_from")
+    private LocalDate validFrom;
 
 }
